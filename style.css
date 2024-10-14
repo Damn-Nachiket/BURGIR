@@ -33,6 +33,13 @@ nav {
     font-weight: 900;
 }
 
+#nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: row;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -49,10 +56,11 @@ nav {
 
 #logo {
     display: flex;
-    list-style: none;
+    list-style: none;  
 }
 
 #logo li {
+    list-style: none;
     margin: 0 15px;
 }
 
@@ -86,7 +94,6 @@ nav {
 
 .hero-content {
     margin-left: 10%;
-    margin-top: 5%;
 }
 
 .hero-content h1 {
@@ -182,9 +189,11 @@ footer {
         flex-direction: row;
         position: absolute;
         top: 50px;
+        left: 0;
         background: transparent;
         width: 100%;
         justify-content: center;
+        background-color: #333;
     }
 
     .nav-links.active {
@@ -204,42 +213,38 @@ footer {
     }
 
     .hero {
-        background: url('images/hero-bg-image.jpg') no-repeat center center-cover;
-        height: 50vh;
-        width: 50vh;
-        display: flex;
+        /* background: url('images/hero-bg-image.jpg') no-repeat center center-cover; */
+        height: 60vh;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        /* display: flex;
         justify-content: left;
-        align-items: center;
+        align-items: center; */
         text-align: left;
         color: white;
     }
 
     .hero-content {
         margin-left: 5%;
-        margin-top: -20%;
+        margin-top: -10%;
     }
 
     .menu-item img {
         max-width: 100%;
-        /* Makes sure image scales down to fit its container */
-        /* height: auto; */
-        /* Maintains the aspect ratio */
         border-radius: 5px;
     }
 
     .about-section p {
         font-size: 1rem;
-        /* Adjusts font size for smaller screens */
     }
 
     #contact-form input,
     #contact-form textarea {
         width: 100%;
-        /* Full width input fields on small screens */
     }
 
     footer {
         font-size: 1rem;
-        /* Adjust footer text size for mobile */
     }
 }
