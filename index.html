@@ -10,7 +10,11 @@
     <!-- Navigation -->
     <heade>
       <nav id="nav-bar">
-        <div id="logo"><ul><li><a href="#">ABDU BURGIR</a></li></ul></div>
+        <div id="logo">
+          <ul>
+            <li><a href="#">ABDU BURGIR</a></li>
+          </ul>
+        </div>
         <ul class="nav-links" id="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#menu">Menu</a></li>
@@ -37,41 +41,81 @@
     <section id="menu" class="menu-section">
       <h2>Our Burgers</h2>
       <div class="menu-grid">
-        <!-- Menu Items -->
-        <div class="menu-item">
+        <!-- Burger 1 -->
+        <div
+          class="menu-item"
+          data-image="images/burger1.jpg"
+          data-title="Classic Burger"
+          data-description="A timeless favorite with fresh lettuce, tomatoes, and cheese."
+          onclick="openModal(event)"
+        >
           <img src="images/burger1.jpg" alt="Classic Burger" />
           <h3>Classic Burger</h3>
           <p>A timeless favorite with fresh lettuce, tomatoes, and cheese.</p>
           <span class="price">$8.99</span>
         </div>
-        <div class="menu-item">
+
+        <!-- Burger 2 -->
+        <div
+          class="menu-item"
+          data-image="images/burger2.jpg"
+          data-title="Cheese Burger"
+          data-description="A timeless favorite with fresh lettuce, tomatoes, and cheese."
+          onclick="openModal(event)"
+        >
           <img src="images/burger2.jpg" alt="Cheese Burger" />
           <h3>Cheese Burger</h3>
           <p>A timeless favorite with fresh lettuce, tomatoes, and cheese.</p>
           <span class="price">$8.99</span>
         </div>
-        <div class="menu-item">
+
+        <!-- Burger 3 -->
+        <div
+          class="menu-item"
+          data-image="images/burger3.jpg"
+          data-title="Burger + Fries"
+          data-description="A timeless favorite with fresh lettuce, tomatoes, and cheese."
+          onclick="openModal(event)"
+        >
           <img src="images/burger3.jpg" alt="Burger + Fries" />
-          <h3>Burger + Fries </h3>
+          <h3>Burger + Fries</h3>
           <p>A timeless favorite with fresh lettuce, tomatoes, and cheese.</p>
           <span class="price">$8.99</span>
         </div>
-        <!-- Add more burger items here -->
       </div>
     </section>
+
+    <!-- Single Modal for All Burgers -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="Burger Image" />
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+      </div>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="about-section">
       <h2>About Us</h2>
-      <p>We craft burgers with fresh ingredients and unique flavors. Our passion is to deliver the best burger experience.</p>
-  </section>
+      <p>
+        We craft burgers with fresh ingredients and unique flavors. Our passion
+        is to deliver the best burger experience.
+      </p>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
       <h2>Contact Us</h2>
       <form id="contact-form">
         <input type="text" placeholder="Name" name="name" id="name" required />
-        <input type="email" placeholder="Email" name="email" id="email" required />
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          id="email"
+          required
+        />
         <textarea placeholder="Message" name="message" id="message"></textarea>
         <button type="submit">Submit</button>
       </form>
